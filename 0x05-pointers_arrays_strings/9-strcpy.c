@@ -1,26 +1,19 @@
  #include "main.h"
-  #include <stdio.h>
-
-  /** 
-  *  _strcpy -  copies a string into a deztinated variable
-  * @dest: destination char argument of characters 
-  * @src: source char argument of characters 
-  * Return: a string of character upon success 
-  */
-    char*_strcpy(char *dest, char *src) 
+/**
+ *_strcpy - copy stringat the end of another string including \0.
+ *@dest: pointer to string to be copied to.
+ *@src: pointer to string to be copied.
+ *
+ *Return: pointer to dest.
+ */
+char *_strcpy(char *dest, char *src)
 {
-      int l;
-      int i;
+	int j;
 
- while (src[l] != '\0' ) 
-  {  
-      l++;
-  } 
-
-   for(i = 0; i < l ; i++) 
-  { 
-     dest[i] = src[i];
-  } 
-    dest[i] = '\0';
-     return(dest);
-  } 
+	for (j = 0; src[j] != '\0'; j++)
+	{
+		dest[j] = src[j];
+	}
+	dest[j] = '\0';
+	return (dest);
+}
